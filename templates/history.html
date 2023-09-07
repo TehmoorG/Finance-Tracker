@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <h1>{{title}}</h1>
+    <table class="center-table history">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Action</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction["symbol"] }}</td>
+                    <td>{{ transaction["type"] }}</td>
+                    <td>{{ transaction["shares"] |absolute }}</td>
+                    <td>{{ transaction["stock_price"] | usd }}</td>
+                    <td>{{ transaction["timestamp"]}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

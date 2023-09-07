@@ -1,0 +1,50 @@
+body {
+    background-color: #2C3333;
+    color : white;
+}
+
+.navbar {
+    background-color: #2E4F4F;
+}
+
+.navbar, .navbar a {
+    color: #CBE4DE;
+}
+
+#navbar :hover {
+    color: teal;  /* Slightly different shade for hover effect */
+}
+
+/* Size for brand */
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+.center-table {
+    margin: 0 auto;
+    /* This will center the table */
+    width: 30%;
+    /* or whatever width you want */
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+    width: 25%;
+    /* or whatever width you want */
+}
+
+.history {
+    width: 45%;
+}
+
+/*change the colour of the button from bootstrap standard*/
+
+.btn-primary{
+    background-color:#0E8388;
+    border-color:#0E8388;
+}
+
+h3 {
+    color: #CBE4DE;
+}
