@@ -4,6 +4,7 @@ from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
+import re
 
 from helpers import apology, login_required, lookup, usd, stock_shares
 
@@ -244,6 +245,11 @@ def register():
         rows = db.execute("SELECT * FROM users WHERE username = ?", username)
         if rows:
             return apology("Username already taken", 400)
+        
+        #check the password
+        if not re.match(r"^(?=.*[A-Z])(?=.*\d).{6,}$", password):
+            return apology("Password must have a minimum of: 6 characters, 1 digit and 1 uppercase")
+
         hash = generate_password_hash(password)
         user_id = db.execute(
             "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash
