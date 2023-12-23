@@ -135,7 +135,7 @@ def buy():
 def history():
     transactions = db.execute(
         "SELECT * FROM transactions WHERE user_id = ?;", session["user_id"]
-    )
+    )[::-1]
     return render_template("history.html", transactions=transactions)
 
 
