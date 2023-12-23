@@ -1,6 +1,8 @@
-# Stock Portfolio Tracker
+## Live Application
 
-Stock Portfolio Tracker is a web application designed to simulate a stock trading platform. Originating from the finance problem set of CS50x, this project is continuously evolving with regular improvements and feature additions.
+StockSaver is now live! Visit the application [here](https://stocksaver.pythonanywhere.com/login).
+
+StockSaver is a web application designed to simulate a stock trading platform. Originating from the finance problem set of CS50x, this project is continuously evolving with regular improvements and feature additions. It allows users to create a virtual stock portfolio to simulate the experience of trading stocks.
 
 ## Features
 
@@ -17,7 +19,7 @@ Stock Portfolio Tracker is a web application designed to simulate a stock tradin
 
     ```bash
     git clone [repository_link]
-    cd finance
+    cd StockSaver
     ```
 
 2. **Install the required packages**:
@@ -58,4 +60,5 @@ Stock Portfolio Tracker is a web application designed to simulate a stock tradin
 
 ## Continuous Improvement
 
-This project is a living entity, with plans for consistent updates, feature additions, and improvements as I progress in my programming journey. Feedback and suggestions are always welcome.
+StockSaver is a living entity, with plans for consistent updates, feature additions, and improvements as I progress in my programming journey. Feedback and suggestions are always welcome.
+
